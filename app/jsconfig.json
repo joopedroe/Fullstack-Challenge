@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "~/*": ["*"],
+      "@Config/*": [
+        "config/*"
+      ],
+      "@Views/*": [
+        "views/*"
+      ],
+      "@Presenter/*": [
+        "presenter/*"
+      ],
+
+
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+  
+}

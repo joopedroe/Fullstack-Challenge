@@ -1,0 +1,62 @@
+@import "./spacing-responsive.scss";
+
+//
+// Colors
+// Main
+$font-color: #1e2022;
+$title-color: #302e53;
+$border-color: #9a9a9d;
+
+$cy-purple: #6e45e2;
+$cy-blue: #88d3ce;
+
+$primary: #4399ff;
+$info: #909399;
+$success: #13ce66;
+$warning: #ff9800;
+$error: #ff4949;
+
+$overlay: #000;
+
+//Sidebar
+$sidebar-gradient: linear-gradient(135deg, #0f1122 0%, #292c43 100%);
+$sidebar-gradient-extra-strong: linear-gradient(135deg, rgba(#0f1122, .8) 0%, rgba(#292c43, .8) 100%);
+$sidebar-name: #3e4368;
+$sidebar-active: #2a2c44;
+
+// Gradients
+$cy-gradient: linear-gradient(135deg, $cy-blue 0%,$cy-purple 100%);
+$cy-gradient-light: linear-gradient(135deg, rgba($cy-blue, .25) 0%,rgba($cy-purple, .25) 100%);
+$cy-gradient-medium: linear-gradient(135deg, rgba($cy-blue, .5) 0%,rgba($cy-purple, .5) 100%);
+$cy-gradient-strong: linear-gradient(135deg, rgba($cy-blue, .75) 0%,rgba($cy-purple, .75) 100%);
+$cy-gradient-extra-strong: linear-gradient(135deg, rgba($cy-blue, .9) 0%,rgba($cy-purple, .75) 100%);
+
+$dark-overlay-light: linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .25));
+$dark-overlay-medium: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+$dark-overlay-strong: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75));
+
+$light-overlay-light: linear-gradient(rgba(255, 255, 255, .25), rgba(255, 255, 255, .25));
+$light-overlay-medium: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5));
+$light-overlay-strong: linear-gradient(rgba(255, 255, 255, .75), rgba(255, 255, 255, .75));
+$light-overlay-extra-strong: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .9));
+$light-gradient: linear-gradient(rgba(255, 255, 255, .75), rgba(255, 255, 255, 0));
+
+@function custom-gradient($first-color, $second-color) {
+  @return linear-gradient(135deg, $first-color 0%, $second-color 100%);
+}
+
+@function custom-radial-lines($first-color, $second-color) {
+  @return repeating-radial-gradient(circle at 50% 58%, $first-color, $first-color 25px, $second-color 25px, $second-color 50px);
+}
+
+@function custom-linear-lines($first-color, $second-color) {
+  @return repeating-linear-gradient(0, $first-color, $first-color 25px, $second-color 25px, $second-color 50px);
+}
+
+
+//
+// Grid
+$break-point-sm: 600px;
+$break-point-md: 960px;
+$break-point-lg: 1264px;
+$break-point-xl: 1904px;

@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  vue_cli_service:
+    image: node:lts
+    working_dir: /code
+    stdin_open: true
+    container_name: ipope_appweb
+    command: bash -c 'yarn && yarn run serve'
+    volumes:
+      - ./:/code
+      - ./node_modules:/code/node_modules
+    ports:
+      - 8080:8080

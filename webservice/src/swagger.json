@@ -1,0 +1,282 @@
+{
+    "openapi":"3.0.0",
+    "info":{
+        "title": "API Space Flight News Documentation",
+        "description": "Fullstack Challenge 🏅 2022",
+        "version": "1.0.0",
+        "contact":{
+            "email": "joopedroe936@gmail.com"
+        }
+    },
+    "paths":{
+        "/articles":{
+            "post":{
+                "tags":["Articles"],
+                "summary": "Creat article",
+                "description": "Route to register article",
+                "requestBody":{
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "$ref":"#/definitions/Article",
+                                "example":{
+                                    "id": 17253,
+                                    "featured": false,
+                                    "title": "NASA says its SLS rocket is good to go for a launch attempt next Wednesday",
+                                    "url": "https://arstechnica.com/science/2022/11/nasa-says-its-sls-rocket-is-good-to-go-for-a-launch-attempt-next-wednesday/",
+                                    "imageUrl": "https://cdn.arstechnica.net/wp-content/uploads/2022/09/Artemis-I-LA1-Aug-2022-3042.jpg",
+                                    "newsSite": "Arstechnica",
+                                    "summary": "\"If we didn’t design it to be out there in harsh weather we picked the wrong launch spot.\"",
+                                    "publishedAt": "2022-11-11T22:28:28.000Z",
+                                    "launches": [
+                                        {
+                                            "id": "65896761-b6ca-4df3-9699-e077a360c52a",
+                                            "provider": "Launch Library 2"
+                                        }
+                                    ],
+                                    "events": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "201":{
+                        "description": "Article registered"
+                    } ,
+                    "500":{
+                        "description": "Article unregistered"
+                    } 
+                }
+            },
+            "get":{
+                "tags":["Articles"],
+                "summary": "List all articles",
+                "description": "List articles pagination 10",
+                "operationId": "getPetById",
+                "parameters":[{
+                    "in": "query",
+                    "name": "page",
+                    "description": "page should be returned",
+                    "schema":{
+                        "type": "integer"
+                    }
+            }],
+                "responses":{
+                    "200":{
+                        "description": "The request has succeeded!",
+                        "content":{
+                            "application/json":{
+                                "schema":{
+                                    "$ref":"#/definitions/Article"
+                                }
+                            }
+                        }
+                    }
+                    } ,
+                    "404":{
+                        "description": "Article not found!"
+                    } 
+            }
+        },
+        "/articles/{id}":{
+            "get":{
+                "tags":["Articles"],
+                "summary": "Get article",
+                "description": "Return article",
+                "operationId": "getPetById",
+                "parameters":[{
+                    "in": "path",
+                    "name": "id",
+                    "description": "_id of article to return",
+                    "schema":{
+                        "type": "string"
+                    }
+            }],
+                "responses":{
+                    "200":{
+                        "description": "The request has succeeded!",
+                        "content":{
+                            "application/json":{
+                                "schema":{
+                                    "example":{
+                                        "id": 17253,
+                                        "featured": false,
+                                        "title": "NASA says its SLS rocket is good to go for a launch attempt next Wednesday",
+                                        "url": "https://arstechnica.com/science/2022/11/nasa-says-its-sls-rocket-is-good-to-go-for-a-launch-attempt-next-wednesday/",
+                                        "imageUrl": "https://cdn.arstechnica.net/wp-content/uploads/2022/09/Artemis-I-LA1-Aug-2022-3042.jpg",
+                                        "newsSite": "Arstechnica",
+                                        "summary": "\"If we didn’t design it to be out there in harsh weather we picked the wrong launch spot.\"",
+                                        "publishedAt": "2022-11-11T22:28:28.000Z",
+                                        "launches": [
+                                            {
+                                                "id": "65896761-b6ca-4df3-9699-e077a360c52a",
+                                                "provider": "Launch Library 2"
+                                            }
+                                        ],
+                                        "events": []
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    } ,
+                    "404":{
+                        "description": "Article not found!"
+                    } 
+            },
+            "put":{
+                "tags":["Articles"],
+                "summary": "Update article",
+                "description": "Update article",
+                "parameters":[{
+                    "in": "path",
+                    "name": "id",
+                    "description": "_id of article to update",
+                    "schema":{
+                        "type": "string"
+                    }
+            }],
+            "requestBody":{
+                "content":{
+                    "application/json":{
+                        "schema":{
+                            "example":{
+                                "id": 17253,
+                                "featured": false,
+                                "title": "NASA says its SLS rocket is good to go for a launch attempt next Wednesday",
+                                "url": "https://arstechnica.com/science/2022/11/nasa-says-its-sls-rocket-is-good-to-go-for-a-launch-attempt-next-wednesday/",
+                                "imageUrl": "https://cdn.arstechnica.net/wp-content/uploads/2022/09/Artemis-I-LA1-Aug-2022-3042.jpg",
+                                "newsSite": "Arstechnica",
+                                "summary": "\"If we didn’t design it to be out there in harsh weather we picked the wrong launch spot.\"",
+                                "publishedAt": "2022-11-11T22:28:28.000Z",
+                                "launches": [
+                                    {
+                                        "id": "65896761-b6ca-4df3-9699-e077a360c52a",
+                                        "provider": "Launch Library 2"
+                                    }
+                                ],
+                                "events": []
+                            }
+                        }
+                    }
+                }
+            },
+                "responses":{
+                    "200":{
+                        "description": "The request has succeeded!",
+                        "content":{
+                            "application/json":{
+                                "schema":{
+                                    "example":{
+                                        "id": 17253,
+                                        "_id": "3445jh5345uhu435",
+                                        "featured": false,
+                                        "title": "NASA says its SLS rocket is good to go for a launch attempt next Wednesday",
+                                        "url": "https://arstechnica.com/science/2022/11/nasa-says-its-sls-rocket-is-good-to-go-for-a-launch-attempt-next-wednesday/",
+                                        "imageUrl": "https://cdn.arstechnica.net/wp-content/uploads/2022/09/Artemis-I-LA1-Aug-2022-3042.jpg",
+                                        "newsSite": "Arstechnica",
+                                        "summary": "\"If we didn’t design it to be out there in harsh weather we picked the wrong launch spot.\"",
+                                        "publishedAt": "2022-11-11T22:28:28.000Z",
+                                        "launches": [
+                                            {
+                                                "id": "65896761-b6ca-4df3-9699-e077a360c52a",
+                                                "provider": "Launch Library 2"
+                                            }
+                                        ],
+                                        "events": []
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    } ,
+                    "500":{
+                        "description": "Article not update!"
+                    } 
+            },
+            "delete":{
+                "tags":["Articles"],
+                "summary": "Delete article",
+                "description": "Delete article",
+                "parameters":[{
+                    "in": "path",
+                    "name": "id",
+                    "description": "_id of article to update",
+                    "schema":{
+                        "type": "string"
+                    }
+            }],
+                "responses":{
+                    "200":{
+                        "description": "The request has succeeded!",
+                        "content":{
+                            "application/json":{
+                                "schema":{
+                                    "example":{
+                                        "sucess": "true",
+                                         "ok": "true" 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    } ,
+                    "500":{
+                        "description": "Article not delete",
+                        "content":{
+                            "application/json":{
+                                "schema":{
+                                    "example":{
+                                        "sucess": "false",
+                                         "message": "Article not delete!" 
+                                    }
+                                }
+                            }
+                        }
+                    } 
+            }
+        }
+        
+    },
+    "definitions": {
+        "Article":{
+            "type":"object",
+                                    "properties": {
+                                        "_id": {
+                                            "type": "string"
+                                        },
+                                        "id": {
+                                            "type": "number"
+                                        },
+                                        "featured":{
+                                            "type": "boolean"
+                                        } ,
+                                        "title":{
+                                            "type": "string"
+                                        },
+                                        "url":{
+                                            "type": "string"
+                                        },
+                                        "imageUrl":{
+                                            "type": "string"
+                                        },
+                                        "newsSite": {
+                                            "type": "string"
+                                        },
+                                        "summary": {
+                                            "type": "string"
+                                        },
+                                        "publishedAt": {
+                                            "type": "string"
+                                        },
+                                        "launches": {
+                                            "type": "array"
+                                        },
+                                        "events": {
+                                                "type": "array"
+                                            }
+                                    }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+{
+    "root": true,
+    "extends": [
+      "plugin:vue/recommended",
+      "@vue/airbnb"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint",
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "allowImportExportEverywhere": true
+    },
+    "rules": {
+      "linebreak-style": 0,
+      "no-param-reassign": 0,
+      "one-var": 0,
+      "prefer-destructuring": 0,
+      "one-var-declaration-per-line": 0,
+      "no-bitwise": 0,
+      "func-names": 0,
+      "arrow-parens": [
+        "error",
+        "as-needed"
+      ],
+      "quotes": [
+        2,
+        "single"
+      ],
+      "comma-dangle": [
+        "error",
+        "never"
+      ],
+      "curly": [
+        "error",
+        "multi"
+      ],
+      "no-prototype-builtins": 0,
+      "import/no-extraneous-dependencies": 0,
+      "function-paren-newline": [
+        "error",
+        "consistent"
+      ],
+      "import/extensions": "never",
+      "max-len": 0,
+      "camelcase": 0,
+      "import/no-unresolved": 0,
+      "no-underscore-dangle": 0,
+      "no-mixed-operators": 0,
+      "object-shorthand": 0,
+      "import/prefer-default-export": 0,
+      "nonblock-statement-body-position": 0,
+      "no-extra-boolean-cast": 0,
+      "no-lonely-if": 0,
+      "no-case-declarations": 0,
+      "import/no-cycle": 0,
+      "no-continue": 0,
+      "vue/max-attributes-per-line": ["error", {
+        "singleline": 5,
+        "multiline": {
+          "max": 5,
+          "allowFirstLine": true
+        }
+      }],
+      "vue/html-closing-bracket-newline": ["error", {
+        "singleline": "never",
+        "multiline": "never"
+      }],
+      "vue/html-indent": ["error", "tab", {
+        "alignAttributesVertically": false
+      }],
+      "no-tabs": "off",
+      "vue/prop-name-casing": ["error", "snake_case"],
+      "no-nested-ternary": "off"
+    }
+  }
