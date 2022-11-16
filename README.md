@@ -1,8 +1,8 @@
 # Fullstack Challenge 🏅 2022 - Space Flight News
 
-Aplicação que armazena e exibe dados de artigos relacionados a voos espaciais;
-Foi desenvolvido uma api que armazena e mantém sincronizado o banco de dados com a API https://api.spaceflightnewsapi.net/v3/;
-Foi desenvolvido o frontend que consome esses dados da API;
+- Aplicação que armazena e exibe dados de artigos relacionados a voos espaciais;
+- Foi desenvolvido uma api que armazena e mantém sincronizado o banco de dados com a API https://api.spaceflightnewsapi.net/v3/;
+- Foi desenvolvido o frontend que consome esses dados da API;
 
 
 ## API
