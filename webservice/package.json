@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "dev": "nodemon src/index.js",
-    "loadDB": "node src/scripts/loadDataArticles.js"
+    "loadDB": "node src/scripts/loadDataArticles.js",
+    "script": "node src/scripts/loadDataArticles.js"
   },
   "author": "",
   "license": "ISC",
